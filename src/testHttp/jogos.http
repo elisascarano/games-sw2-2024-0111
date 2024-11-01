@@ -1,14 +1,15 @@
 @url = https://8080-henriquerom-gamessw2202-yle95qtiioq.ws-us116.gitpod.io
 
-GET {{url}}/plataformas
+GET {{url}}/jogos
 
 ###
-POST {{url}}/plataformas
+POST {{url}}/jogos
 Content-Type: application/json
 
 {
-    "nome": "PC"
+    "titulo": "Counter Strike 2",
+    "plataforma": 2
 }
 
 ###
-GET {{url}}/plataformas/1
+GET {{url}}/jogos/1

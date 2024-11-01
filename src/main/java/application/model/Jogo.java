@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.hibernate.annotations.ManyToAny;
 
+import application.record.JogoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,4 +32,10 @@ public class Jogo {
     @ManyToAny
     @JoinTable(name = "jogos_possuem_plataformas", joinColumns = @JoinColumn(name = "id_jogo"), inverseJoinColumns = @JoinColumn(name = "id_plataforma"))
     private Set<Plataforma> plataformas;
+
+    public Jogo(JogoDTO jogo) {
+        this.id = jogo.id();
+        this.titulo = jogo.titulo();
+        this.plataformas = jogo.plataformas();
+    }
 }
