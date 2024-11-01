@@ -9,12 +9,17 @@ import org.springframework.web.server.ResponseStatusException;
 
 import application.model.Jogo;
 import application.record.JogoDTO;
+import application.record.JogoListDTO;
 import application.repository.JogoRepository;
 
 @Service
 public class JogoService {
     @Autowired
     private JogoRepository jogoRepo;
+
+    public Iterable<JogoListDTO> getAllSimple() {
+        return jogoRepo.findAll().stream().map(JogoListDTO::new).toList();
+    }
 
     public Iterable<JogoDTO> getAll() {
         return jogoRepo.findAll().stream().map(JogoDTO::new).toList();

@@ -1,4 +1,4 @@
-@url = https://8080-henriquerom-gamessw2202-yle95qtiioq.ws-us116.gitpod.io
+@url = https://8080-elisascaran-gamessw2202-w1cnpcjkbt6.ws-us116.gitpod.io
 
 GET {{url}}/plataformas
 
@@ -7,7 +7,7 @@ POST {{url}}/plataformas
 Content-Type: application/json
 
 {
-    "nome": "PC"
+    "nome": "PC fds"
 }
 
 ###

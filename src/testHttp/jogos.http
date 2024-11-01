@@ -1,4 +1,4 @@
-@url = https://8080-henriquerom-gamessw2202-yle95qtiioq.ws-us116.gitpod.io
+@url = https://8080-elisascaran-gamessw2202-w1cnpcjkbt6.ws-us116.gitpod.io
 
 GET {{url}}/jogos
 
@@ -7,9 +7,10 @@ POST {{url}}/jogos
 Content-Type: application/json
 
 {
-    "titulo": "Counter Strike 2",
-    "plataforma": 2
+    "titulo": "Barbie",
+    "plataforma":  [
+        {"id": 1},
+        {"id": 2}
+    ]
 }
 
-###
-GET {{url}}/jogos/1
